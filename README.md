@@ -1,19 +1,22 @@
 # Awesome Uncensored AI [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 
-> A curated list of uncensored and locally-runnable AI: coding agents, model
-> runners, uncensoring techniques, and the tooling around them.
+> A curated list of uncensored and locally-runnable AI: coding agents, SDKs,
+> model runners, uncensoring techniques, benchmarks, and guides.
 
 Mainstream assistants refuse a large and growing share of legitimate technical
 requests: security research, red-teaming, low-level systems code, scraping,
-content other people find distasteful. This list collects the tools that do not.
+content other people find distasteful. This list collects the tools that don't.
 
 Everything here is open source or self-hostable unless marked **hosted**.
 
 ## Contents
 
 - [Coding agents](#coding-agents)
+- [SDKs and tooling](#sdks-and-tooling)
 - [Model runners](#model-runners)
 - [Uncensoring techniques](#uncensoring-techniques)
+- [Benchmarks](#benchmarks)
+- [Guides](#guides)
 - [Finding models](#finding-models)
 - [Self-hosting and hardware](#self-hosting-and-hardware)
 - [Reading](#reading)
@@ -24,16 +27,29 @@ Everything here is open source or self-hostable unless marked **hosted**.
 Terminal- and editor-based agents that read, write and run code.
 
 - **[Tartarus](https://tartarusai.dev)** **(hosted)** — Uncensored coding agent.
-  CLI (`pip install tartarus-console`) plus an OpenAI-compatible API on a hosted
-  model. Ships code instead of refusals; crypto-only billing, no KYC.
+  CLI (`pip install tartarus-console`) plus an OpenAI-compatible API. Ships code
+  instead of refusals; crypto-only billing, no KYC.
 - [Aider](https://github.com/Aider-AI/aider) — Pair-programming in your terminal;
-  bring your own model (local or hosted).
+  bring your own model.
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands) — Autonomous software
   agent; runs any OpenAI-compatible backend.
 - [Cline](https://github.com/cline/cline) — Agentic coding inside VS Code; works
   with local and self-hosted endpoints.
 - [Continue](https://github.com/continuedev/continue) — Open-source IDE
   autocomplete and chat; point it at any model.
+
+## SDKs and tooling
+
+- [tartarus-sdk](https://github.com/TartarusAIDev/tartarus-sdk) — Typed
+  TypeScript client (chat, streaming, tool-calling).
+- [tartarus-mcp](https://github.com/TartarusAIDev/tartarus-mcp) — Model Context
+  Protocol server; use an uncensored model as a tool in Claude Desktop, Cursor,
+  Cline.
+- [tartarus-cookbook](https://github.com/TartarusAIDev/tartarus-cookbook) —
+  Runnable Python/Node/curl examples for an OpenAI-compatible uncensored API.
+
+Any OpenAI SDK works against an OpenAI-compatible endpoint; just change the base
+URL.
 
 ## Model runners
 
@@ -53,14 +69,30 @@ Run models locally, or serve them behind an OpenAI-compatible endpoint.
 
 How refusal behaviour is removed or bypassed, for research.
 
-- **Abliteration** — Refusal in instruction-tuned models is largely mediated by
-  a single direction in activation space; zeroing it out suppresses refusals
-  without retraining (Arditi et al., 2024). Community "abliterated" variants of
-  popular open models apply this.
+- **Abliteration** — Refusal is largely mediated by a single direction in
+  activation space; projecting it out suppresses refusals without retraining
+  (Arditi et al., 2024). Most community "abliterated" models apply this.
 - **Fine-tuning / DPO** — Preference tuning on compliant responses to override
   safety alignment.
-- **System-prompt and decoding steering** — Weaker, prompt-level methods that do
-  not touch weights.
+- **System-prompt and decoding steering** — Weaker, prompt-level methods that
+  don't touch weights.
+
+See [how-abliteration-works](https://github.com/TartarusAIDev/uncensored-ai-guide/blob/main/docs/how-abliteration-works.md)
+for the mechanism.
+
+## Benchmarks
+
+- [refusal-bench](https://github.com/TartarusAIDev/refusal-bench) — Measure how
+  often a model refuses *legitimate* coding tasks (false-refusal rate) against
+  any OpenAI-compatible endpoint.
+- **XSTest** — The reference over-refusal test set from the research literature;
+  the inspiration for false-refusal evaluation.
+
+## Guides
+
+- [The Uncensored AI Guide](https://github.com/TartarusAIDev/uncensored-ai-guide)
+  — What "uncensored" means, how abliteration works, local vs hosted, and the
+  chat-template gotcha that breaks tool-calling.
 
 ## Finding models
 
