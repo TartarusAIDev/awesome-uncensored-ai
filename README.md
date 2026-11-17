@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://tartarusai.dev/?utm_source=github&utm_medium=readme&utm_campaign=awesome-uncensored-ai&utm_content=banner">
+    <img src="assets/banner.svg" alt="awesome-uncensored-ai — Curated uncensored and locally-runnable AI tooling" width="100%">
+  </a>
+</p>
+
 # Awesome Uncensored AI [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 
 > A curated list of uncensored and locally-runnable AI: coding agents, SDKs,
@@ -26,7 +32,7 @@ Everything here is open source or self-hostable unless marked **hosted**.
 
 Terminal- and editor-based agents that read, write and run code.
 
-- **[Tartarus](https://tartarusai.dev)** **(hosted)** — Uncensored coding agent.
+- **[Tartarus](https://tartarusai.dev/?utm_source=github&utm_medium=readme&utm_campaign=awesome-uncensored-ai&utm_content=body)** **(hosted)** — Uncensored coding agent.
   CLI (`pip install tartarus-console`) plus an OpenAI-compatible API. Ships code
   instead of refusals; crypto-only billing, no KYC.
 - [Aider](https://github.com/Aider-AI/aider) — Pair-programming in your terminal;
