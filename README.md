@@ -46,6 +46,8 @@ Terminal- and editor-based agents that read, write and run code.
 
 ## SDKs and tooling
 
+- [abltr](https://abltr.ai) — **(hosted)** OpenAI-compatible endpoint for
+  open-weight and abliterated models; prepaid per-token billing.
 - [tartarus-sdk](https://github.com/TartarusAIDev/tartarus-sdk) — Typed
   TypeScript client (chat, streaming, tool-calling).
 - [tartarus-mcp](https://github.com/TartarusAIDev/tartarus-mcp) — Model Context
