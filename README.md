@@ -64,6 +64,7 @@ Run models locally, or serve them behind an OpenAI-compatible endpoint.
 - [llama.cpp](https://github.com/ggml-org/llama.cpp) — The reference CPU/GPU
   inference engine; `llama-server` exposes an OpenAI-compatible API.
 - [Ollama](https://github.com/ollama/ollama) — One-command local models.
+- [RawMind](https://rawmind.app) (hosted) — Free uncensored reasoning AI chat and multimodal platform for text, image, and video generation.
 - [vLLM](https://github.com/vllm-project/vllm) — High-throughput GPU serving.
 - [LM Studio](https://lmstudio.ai) — Desktop app with a local server.
 - [text-generation-webui](https://github.com/oobabooga/text-generation-webui) —
