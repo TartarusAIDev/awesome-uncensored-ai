@@ -88,6 +88,10 @@ for the mechanism.
 
 ## Benchmarks
 
+- [pyrit-cicd-gate](https://github.com/unst33r-si/pyrit-cicd-gate) — GitHub
+  Action that runs 1,000 adversarial probes per pull request against an
+  OpenAI-compatible endpoint and fails the build above a configurable
+  jailbreak rate.
 - [refusal-bench](https://github.com/TartarusAIDev/refusal-bench) — Measure how
   often a model refuses *legitimate* coding tasks (false-refusal rate) against
   any OpenAI-compatible endpoint.
